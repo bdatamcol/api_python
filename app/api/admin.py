@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.modules.brands.router import router as brands_router
+from app.modules.categories.router import router as categories_router
 
 
 router = APIRouter(
@@ -8,18 +9,14 @@ router = APIRouter(
 )
 
 
-# ============================================================
-# ROUTERS ADMINISTRATIVOS
-# ============================================================
-
 router.include_router(
     brands_router
 )
 
+router.include_router(
+    categories_router
+)
 
-# ============================================================
-# HEALTH
-# ============================================================
 
 @router.get(
     "/health",
