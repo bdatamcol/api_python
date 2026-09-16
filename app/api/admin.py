@@ -16,6 +16,9 @@ from app.modules.motorcycle_variants.router import (
 from app.modules.variant_prices.router import (
     router as variant_prices_router,
 )
+from app.modules.inventory.router import (
+    router as inventory_router,
+)
 
 
 router = APIRouter(
@@ -33,6 +36,7 @@ router.include_router(motorcycles_router)
 router.include_router(motorcycle_aliases_router)
 router.include_router(motorcycle_variants_router)
 router.include_router(variant_prices_router)
+router.include_router(inventory_router)
 
 
 @router.get(
