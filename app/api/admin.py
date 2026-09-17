@@ -55,6 +55,12 @@ from app.modules.promotion_rule_territories.router import (
 from app.modules.promotion_rule_funding.router import (
     router as promotion_rule_funding_router,
 )
+from app.modules.promotion_documents.router import (
+    router as promotion_documents_router,
+)
+from app.modules.model_documents.router import (
+    router as model_documents_router,
+)
 
 
 router = APIRouter(
@@ -85,6 +91,8 @@ router.include_router(promotion_rule_years_router)
 router.include_router(promotion_rule_colors_router)
 router.include_router(promotion_rule_territories_router)
 router.include_router(promotion_rule_funding_router)
+router.include_router(promotion_documents_router)
+router.include_router(model_documents_router)
 
 
 @router.get(
