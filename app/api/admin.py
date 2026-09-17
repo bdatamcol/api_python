@@ -43,6 +43,9 @@ from app.modules.promotion_rule_models.router import (
 from app.modules.promotion_rule_variants.router import (
     router as promotion_rule_variants_router,
 )
+from app.modules.promotion_rule_years.router import (
+    router as promotion_rule_years_router,
+)
 
 
 router = APIRouter(
@@ -69,6 +72,7 @@ router.include_router(promotion_campaign_brands_router)
 router.include_router(promotion_rules_router)
 router.include_router(promotion_rule_models_router)
 router.include_router(promotion_rule_variants_router)
+router.include_router(promotion_rule_years_router)
 
 
 @router.get(
