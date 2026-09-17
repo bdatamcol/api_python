@@ -22,6 +22,9 @@ from app.modules.inventory.router import (
 from app.modules.specification_definitions.router import (
     router as specification_definitions_router,
 )
+from app.modules.model_spec_values.router import (
+    router as model_spec_values_router,
+)
 
 
 router = APIRouter(
@@ -41,6 +44,7 @@ router.include_router(motorcycle_variants_router)
 router.include_router(variant_prices_router)
 router.include_router(inventory_router)
 router.include_router(specification_definitions_router)
+router.include_router(model_spec_values_router)
 
 
 @router.get(
