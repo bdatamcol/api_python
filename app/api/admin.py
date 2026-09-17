@@ -31,6 +31,9 @@ from app.modules.promotion_funding_sources.router import (
 from app.modules.promotion_campaigns.router import (
     router as promotion_campaigns_router,
 )
+from app.modules.promotion_campaign_brands.router import (
+    router as promotion_campaign_brands_router,
+)
 
 
 router = APIRouter(
@@ -53,6 +56,7 @@ router.include_router(specification_definitions_router)
 router.include_router(model_spec_values_router)
 router.include_router(promotion_funding_sources_router)
 router.include_router(promotion_campaigns_router)
+router.include_router(promotion_campaign_brands_router)
 
 
 @router.get(
