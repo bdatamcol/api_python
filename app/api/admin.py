@@ -61,6 +61,9 @@ from app.modules.promotion_documents.router import (
 from app.modules.model_documents.router import (
     router as model_documents_router,
 )
+from app.modules.promotions.router import (
+    router as promotions_router,
+)
 
 
 router = APIRouter(
@@ -93,6 +96,7 @@ router.include_router(promotion_rule_territories_router)
 router.include_router(promotion_rule_funding_router)
 router.include_router(promotion_documents_router)
 router.include_router(model_documents_router)
+router.include_router(promotions_router)
 
 
 @router.get(
